@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  /* For Webkit-based browsers (Chrome, Safari, Edge) */
+  /* 1. Set the overall width and height of the scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; /* For horizontal scrollbars */
+  }
+
+  /* 2. Style the track (the part the scrollbar moves along) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey track */
+  }
+
+  /* 3. Style the thumb (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Dark grey thumb */
+    border-radius: 4px; /* Rounded corners */
+  }
+
+  /* 4. Style the thumb on hover for a nice interactive effect */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey on hover */
+  }
+
+  /* For Firefox - a more limited but still useful approach */
+  html {
+    /* Sets the thumb and track color */
+    scrollbar-color: #888 #f1f1f1;
+    /* Can be 'auto', 'thin', or 'none' */
+    scrollbar-width: thin;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-subhead {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-body {
+    font-family: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  }
+  .text-shadow-strong {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* x-offset, y-offset, blur, color */
+  }
+  .text-shadow {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  .text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-text-shadow {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+}

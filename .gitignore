@@ -1,0 +1,13 @@
+# Ignore system files
+.DS_Store
+
+# Ignore build and dependency folders
+node_modules/
+dist/
+build/
+functions/
+
+# Ignore environment variables and worker secrets
+.env
+cloudflare-worker/
+*.log
